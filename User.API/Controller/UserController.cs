@@ -5,7 +5,9 @@ namespace User.API.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class UserController : ControllerBase
     {
+        [HttpGet]
+        public  GetUsers()
     }
 }
