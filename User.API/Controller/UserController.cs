@@ -7,7 +7,10 @@ namespace User.API.Controller
     [ApiController]
     public class UserController : ControllerBase
     {
-        // [HttpGet]
-        // public  GetUsers()
+        [HttpGet]
+        public string GetUsers()
+        {
+            return "Hello world!";
+        }
     }
 }
