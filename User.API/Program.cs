@@ -1,16 +1,13 @@
-using User.Service.Repository;
-using User.Service.Repository.Interfaces;
-using User.Service.Service;
-using User.Service.Service.Interfaces;
+using User.Service.Extension;
 
 var builder = WebApplication.CreateBuilder(args);
-
+IServiceCollection services = builder.Services;
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddUserDependencies();
 
 var app = builder.Build();
 
