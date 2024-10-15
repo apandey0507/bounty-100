@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using User.Service.DTO;
 
 namespace User.API.Controller
 {
@@ -10,7 +10,13 @@ namespace User.API.Controller
         [HttpGet]
         public string GetUsers()
         {
-            return "Hello world!";
+            return "server started";
+        }
+
+        [HttpPost]
+        public string RegisterUser(UserDto userDto)
+        {
+            return "server started";
         }
     }
 }
