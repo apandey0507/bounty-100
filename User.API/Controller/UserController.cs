@@ -15,7 +15,7 @@ namespace User.API.Controller
         [HttpGet]
         public string GetUsers()
         {
-            var tempVariable = this.config.GetSection("AllowedHosts").Value;
+            var tempVariable = this.config.GetValue<string>("FirstLevelSettings:BottomLevelSettings");
             Console.WriteLine(tempVariable);
             return tempVariable;
         }
